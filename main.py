@@ -33,7 +33,7 @@ selected_image = st.selectbox("Select an image", image_files)
 if selected_image:
     image_path = os.path.join(image_dir, selected_image)
     st.image(image_path,use_column_width=True)
-    prediction=import_and_predict(image,model)
+    prediction=import_and_predict(image_path,model)
     class_names={0:'MASK INCORRECT',1:'MASK', 2:'NO MASK'}
     string="OUTPUT : "+class_names[np.argmax(prediction)]
     st.success(string)

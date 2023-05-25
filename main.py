@@ -24,7 +24,7 @@ def import_and_predict(image_path,model):
     prediction = model.predict(img_reshape)
     return prediction
   
-image_dir = "./For_Testing/"
+image_dir = "./test_face/"
 image_files = os.listdir(image_dir)  
   
 selected_image = st.selectbox("Select an image", image_files)

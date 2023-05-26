@@ -1,2 +1,2 @@
 # facemaskdetection
-This detects face mask
+This model detects if a person has face mask or not

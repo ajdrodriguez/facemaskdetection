@@ -28,16 +28,11 @@ class TestMaskDetection(unittest.TestCase):
         image_path = "maksssksksss13.png"
         mock_prediction = np.array([[0.1, 0.8, 0.1]])  # Assume MASK prediction
 
-        # Mock the model.predict function to return the mock prediction
         self.model.predict.return_value = mock_prediction
 
-        # Call the function and test the result
         prediction = import_and_predict(image_path, self.model)
-
-        # Assert that the prediction is as expected
         expected_prediction = np.argmax(mock_prediction)
-        self.assertEqual(prediction[0], expected_prediction)
-        # Add more assertions as needed based on your specific use case
+        self.assertEqual(prediction[0][1], expected_prediction)
 
 if __name__ == '__main__':
     unittest.main()

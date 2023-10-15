@@ -1,7 +1,7 @@
 import unittest
 import numpy as np
 from unittest.mock import MagicMock
-from your_main_script import load_model, get_recommendation, import_and_predict
+from main import load_model, get_recommendation, import_and_predict
 
 class TestMaskDetection(unittest.TestCase):
     def setUp(self):

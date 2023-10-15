@@ -2,6 +2,7 @@ import unittest
 import numpy as np
 from unittest.mock import MagicMock
 from main import load_model, get_recommendation, import_and_predict
+import test_face
 
 class TestMaskDetection(unittest.TestCase):
     def setUp(self):
@@ -24,7 +25,7 @@ class TestMaskDetection(unittest.TestCase):
 
     def test_import_and_predict(self):
         # Mock image_path and prediction for testing
-        image_path = "facemaskdetection/test_face/maksssksksss13.png"
+        image_path = "maksssksksss13.png"
         mock_prediction = np.array([[0.1, 0.8, 0.1]])  # Assume MASK prediction
 
         # Mock the model.predict function to return the mock prediction

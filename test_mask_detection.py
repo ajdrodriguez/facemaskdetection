@@ -24,7 +24,7 @@ class TestMaskDetection(unittest.TestCase):
 
     def test_import_and_predict(self):
         # Mock image_path and prediction for testing
-        image_path = "mock_image.jpg"
+        image_path = "facemaskdetection/test_face/maksssksksss13.png"
         mock_prediction = np.array([[0.1, 0.8, 0.1]])  # Assume MASK prediction
 
         # Mock the model.predict function to return the mock prediction

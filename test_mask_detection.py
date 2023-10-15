@@ -36,7 +36,7 @@ class TestMaskDetection(unittest.TestCase):
 
         # Assert that the prediction is as expected
         expected_prediction = np.argmax(mock_prediction)
-        self.assertEqual(prediction, expected_prediction)
+        self.assertEqual(prediction[0], expected_prediction)
         # Add more assertions as needed based on your specific use case
 
 if __name__ == '__main__':

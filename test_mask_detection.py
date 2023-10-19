@@ -31,8 +31,8 @@ class TestMaskDetection(unittest.TestCase):
         self.model.predict.return_value = mock_prediction
 
         prediction = import_and_predict(image_path, self.model)
-        expected_prediction = np.argmax(mock_prediction)
-        self.assertEqual(prediction[0][1], expected_prediction)
+        expected_class = np.argmax(mock_prediction)
+        self.assertEqual(np.argmax(prediction), expected_class)
 
 if __name__ == '__main__':
     unittest.main()
